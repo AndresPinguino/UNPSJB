@@ -1,0 +1,66 @@
+\section{Sobrecarga Mínima de Uso - CIRSOC 101/05}
+ 
+La sobrecarga mínima de uso surge de la expresión:
+\begin{align*}
+& L_r = 0.96 \cdot R_1 \cdot R_2 \\
+& \text{siendo } 0.58 \leq L_r < 0.96 \\
+& [L_r] = \frac{KN}{m^2}
+\end{align*}
+Los factores de reducción $R_1$ y $R_2$ son:\\
+\begin{align*}
+& R_1 = 1 \rightarrow \text{si } A_t \leq 19 m^2 \\
+& R_1 = 1.2 - 0.01076 \cdot A_t \rightarrow \text{si } 19 m^2 < A_t < 56 m^2\\
+& R_1 = 0.6 \rightarrow \text{si } A_t \geq 56 m^2 \\
+& A_t = \text{ área tributaria de cualquier elemento estructural}
+\end{align*}
+\begin{align*}
+& R_2 = 1 \rightarrow \text{si } F \leq 4 \\
+& R_2 = 1.2 - 0.05 \cdot F \rightarrow \text{si } 4 < F < 12\\
+& R_2 = 0.6 \rightarrow \text{si } F \geq 12 \\
+& \text{siendo } F = 0.12 \cdot x \text{ y \emph{x} la pendiente expresada en porcentaje}
+\end{align*}
+
+\subsection{Sobrecarga mínima de uso para Pórticos}
+\begin{itemize}
+\item Cálculo de $R_1$
+\begin{align*}
+& A_t = 5m \cdot 25m = 125 m^2\\
+& A_t \geq 56 m^2 \Rightarrow \framebox{$R_1 = 0.6$}
+\end{align*}
+\item Cálculo de $R_2$
+\begin{align*}
+& x = 100 \cdot tan(\theta) \\
+& x = 100 \cdot tan(14.35°) \\
+& x = 25.58 \\
+& F = 0.12 \cdot x \\
+& F = 0.12 \cdot 25.58 = 3.06 \\
+& F \leq 4 \Rightarrow \framebox{$R_2 = 1$}
+\end{align*}
+\item La sobrecarga mínima de uso para el pórtico es:
+\begin{align*}
+& L_r = 0.96 \cdot R_1 \cdot R_2 \\
+& L_r = 0.96 \cdot 0.6 \cdot 1 \\
+& L_r = \framebox{$0.576\frac{KN}{m^2}$}
+\end{align*}
+\subsection{Sobrecarga mínima de uso para Correas}
+\item Cálculo de $R_1$
+\begin{align*}
+& A_t = 1m \cdot 5m = 5 m^2\\
+& A_t \leq 19 m^2 \Rightarrow \framebox{$R_1 = 1$}
+\end{align*}
+\item Cálculo de $R_2$
+\begin{align*}
+& x = 100 \cdot tan(\theta) \\
+& x = 100 \cdot tan(0°) \\
+& x = 0 \\
+& F = 0.12 \cdot x \\
+& F = 0.12 \cdot 0 = 0 \\
+& F \leq 4 \Rightarrow \framebox{$R_2 = 1$}
+\end{align*}
+\item La sobrecarga mínima de uso para la correa es:
+\begin{align*}
+& L_r = 0.96 \cdot R_1 \cdot R_2 \\
+& L_r = 0.96 \cdot 1 \cdot 1 \\
+& L_r = \framebox{$0.96\frac{KN}{m^2}$}
+\end{align*}
+\end{itemize}

@@ -1,0 +1,141 @@
+\begin{center}
+\underline{\Large{T.P.N°4: Cálculo de Correas}}
+\end{center}
+
+Diseñar las correas de cubierta y laterales de chapa doblada F-24 para una estructura con las siguientes características.
+\begin{itemize}
+\item Las acciones y dimensiones para correas de techo son.
+\begin{align*}
+& g=14 \frac{Kg}{m^2} \\
+& p=30 \frac{Kg}{m^2} \\
+& q_w=175 \frac{Kg}{m^2} \\
+& s= 1.05m \quad \text{Separación entre correas} \\
+& l= 5m \quad \text{Separación entre cabreadas} \\
+& \alpha = 18\textsuperscript{o} \quad \text{Inclinación de la cubierta}
+\end{align*}
+
+\item Las acciones y dimensiones para correas laterales son.
+\begin{align*}
+& g=14 \frac{Kg}{m^2} \\
+& q_w=150 \frac{Kg}{m^2} \\
+& s= 1.50m \quad \text{Separación entre correas} \\
+& l= 5m \quad \text{Separación entre cabreadas}
+\end{align*}
+
+Plantear para ambos casos, la situación sin tillas y la otra colocando tillas.
+\end{itemize}
+
+\newpage
+
+\begin{center}
+\underline{\Large{Solución}}
+\end{center}
+
+\begin{enumerate}
+\item \underline{Correas de Techo. Caso Sin Tillas}\\
+\begin{itemize}
+\item El primer estado de carga corresponde a peso propio + sobrecarga.
+
+\begin{figure}[H]
+\begin{center}
+     \includegraphics[scale = 1]{chapters/chapter_1/images/figura1.png}
+\caption{Correa de techo sin tillas - Estado: peso propio + sobrecarga}
+\end{center}
+\end{figure}
+
+$$q= (g+p)\cdot s = (14 \frac{Kg}{m^2}+30 \frac{Kg}{m^2}) \cdot 1.05m = \framebox{$46.2 \frac{Kg}{m}$}$$
+Descomponiendo la resultante en las direcciones $x$ e $y$ tenemos:
+\begin{align*}
+& q_x=q \cdot Sen \alpha= 46.2 \frac{Kg}{m} \cdot Sen(18\textsuperscript{o})= \framebox{$14.27 \frac{Kg}{m}$}\\
+& q_y=q \cdot Cos \alpha= 46.2 \frac{Kg}{m} \cdot Cos(18\textsuperscript{o})= \framebox{$43.93 \frac{Kg}{m}$}
+\end{align*}
+
+Procedemos a calcular los momentos en el centro de la luz, producidos por cada una de estas cargas lineales, suponemos que las correas se encuentran simplemente apoyadas.
+\begin{align*}
+& M_x= \frac{q_y \cdot l^2}{8} = \frac{43.93 \frac{Kg}{m} \cdot (5m)^2}{8} = \framebox{$137.28 Kg.m$} \\
+& M_y= \frac{q_x \cdot l^2}{8} = \frac{14.27 \frac{Kg}{m} \cdot (5m)^2}{8} = \framebox{$44.59 Kg.m$}
+\end{align*}
+
+\newpage
+\item El segundo estado de carga corresponde a peso propio + viento.
+
+\begin{figure}[H]
+\begin{center}
+     \includegraphics[scale = 1]{chapters/chapter_1/images/figura2.png}
+\caption{Correa de techo sin tillas - Estado: peso propio + viento}
+\end{center}
+\end{figure}
+
+Descomponiendo la resultante en las direcciones $x$ e $y$ tenemos:
+\begin{align*}
+& q_x=g \cdot Sen \alpha \cdot s = 14 \frac{Kg}{m^2} \cdot Sen(18\textsuperscript{o}) \cdot 1.05m= \framebox{$4.54 \frac{Kg}{m}$}\\
+& q_y=(q_w - g \cdot Cos \alpha) \cdot s = (175 \frac{Kg}{m^2} - 14 \frac{Kg}{m^2} \cdot Cos(18\textsuperscript{o}) \cdot 1.05m= \framebox{$169.76 \frac{Kg}{m}$}
+\end{align*}
+
+Procedemos a calcular los momentos en el centro de la luz, producidos por cada una de estas cargas lineales, suponemos que las correas se encuentran simplemente apoyadas.
+
+\begin{align*}
+& M_x= \frac{q_y \cdot l^2}{8} = \frac{169.76 \frac{Kg}{m} \cdot (5m)^2}{8} = \framebox{$530.5 Kg.m$} \\
+& M_y= \frac{q_x \cdot l^2}{8} = \frac{4.54 \frac{Kg}{m} \cdot (5m)^2}{8} = \framebox{$14.18 Kg.m$}
+\end{align*}
+
+\item Tension admisible.\\
+Dado que se utiliza acero F-24, tenemos según el reglamento CIRSOC 301 una tensión de fluencia $\sigma_{fl}=2400 \frac{Kg}{cm^2}$ y tomando un coeficiente de seguridad $\gamma = 1.6$ , se obtiene una tensión admisible de:
+$$\sigma_{adm}= \frac{\sigma_{fl}}{\gamma} = \frac{2400 \frac{Kg}{cm^2}}{1.6} = \framebox{$1500 \frac{Kg}{cm^2}$}$$
+
+\newpage
+\item Selección de la correa.\\
+Adoptamos un perfil \framebox{C 180-70-25-2.5} de chapa doblada, con las siguientes características:
+\begin{align*}
+& W_x= 48.912 cm^3 \\
+& W_y= 12.945 cm^3 \\
+& J_x= 440.204 cm^4 \\
+& J_y= 61.373 cm^4
+\end{align*}
+
+\item Verificamos las tensiones para ambos estados de carga.\\
+\underline{Estado de carga 1: peso propio + sobrecarga}
+\begin{align*}
+& \sigma_x=\frac{M_x}{W_x} = \frac{13728 Kg.cm}{48.912 cm^3} = 280.66 \frac{Kg}{cm^2}\\
+& \sigma_y=\frac{M_y}{W_y} = \frac{4459 Kg.cm}{12.945 cm^3} = 344.45 \frac{Kg}{cm^2}\\
+& \sigma_t= \sigma_x + \sigma_y = 280.66 \frac{Kg}{cm^2} + 344.45 \frac{Kg}{cm^2} = \framebox{$625.12 \frac{Kg}{cm^2}$}\\
+& \sigma_t < \sigma_{adm}\\
+& 625.12 \frac{Kg}{cm^2} < 1500 \frac{Kg}{cm^2} \Rightarrow \text{Verifica} \quad \surd
+\end{align*}
+
+\underline{Estado de carga 2: peso propio + viento}
+\begin{align*}
+& \sigma_x=\frac{M_x}{W_x} = \frac{53050 Kg.cm}{48.912 cm^3} = 1084.60 \frac{Kg}{cm^2}\\
+& \sigma_y=\frac{M_y}{W_y} = \frac{1418 Kg.cm}{12.945 cm^3} = 109.54 \frac{Kg}{cm^2}\\
+& \sigma_t= \sigma_x + \sigma_y = 1084.60 \frac{Kg}{cm^2} + 109.54 \frac{Kg}{cm^2} = \framebox{$1194.14 \frac{Kg}{cm^2}$}\\
+& \sigma_t < \sigma_{adm}\\
+& 1194.14 \frac{Kg}{cm^2} < 1500 \frac{Kg}{cm^2} \Rightarrow \text{Verifica} \quad \surd
+\end{align*}
+
+\item Verificamos las deformaciones para ambos estados de carga.\\
+La flecha admisible de cumplir $f < \frac{l}{300} \Rightarrow f < \frac{5m}{300} \Rightarrow f < 1.66cm$\\
+Para el cálculo de la flecha utilizaremos la expresión $f= \frac{5}{384} \cdot \frac{q \cdot l^4}{E \cdot J}$\\
+
+\underline{Estado de carga 1: peso propio + sobrecarga}
+\begin{align*}
+& f_x=\frac{5}{384} \cdot \frac{q_x \cdot l^4}{E \cdot J_y}\\
+& f_x=\frac{5}{384} \cdot \frac{0.1427 \frac{Kg}{cm} \cdot (500cm)^4}{2100000 \frac{Kg}{cm^2} \cdot 61.373 cm^4} = 0.90cm\\
+& f_y=\frac{5}{384} \cdot \frac{q_y \cdot l^4}{E \cdot J_x}\\
+& f_y=\frac{5}{384} \cdot \frac{0.4393 \frac{Kg}{cm} \cdot (500cm)^4}{2100000 \frac{Kg}{cm^2} \cdot 440.204 cm^4} = 0.38cm\\
+& f = \sqrt{f_x^2+f_y^2} = \sqrt{(0.90cm)^2+(0.38cm)^2} = \framebox{$0.97cm$}\\
+& f < f_{adm}\\
+& 0.97cm < 1.66cm \Rightarrow \text{Verifica} \quad \surd
+\end{align*}
+
+\underline{Estado de carga 2: peso propio + viento}
+\begin{align*}
+& f_x=\frac{5}{384} \cdot \frac{q_x \cdot l^4}{E \cdot J_y}\\
+& f_x=\frac{5}{384} \cdot \frac{0.0454 \frac{Kg}{cm} \cdot (500cm)^4}{2100000 \frac{Kg}{cm^2} \cdot 61.373 cm^4} = 0.28cm\\
+& f_y=\frac{5}{384} \cdot \frac{q_y \cdot l^4}{E \cdot J_x}\\
+& f_y=\frac{5}{384} \cdot \frac{1.6976 \frac{Kg}{cm} \cdot (500cm)^4}{2100000 \frac{Kg}{cm^2} \cdot 440.204 cm^4} = 1.49cm\\
+& f = \sqrt{f_x^2+f_y^2} = \sqrt{(0.28cm)^2+(1.49cm)^2} = \framebox{$1.51cm$}\\
+& f < f_{adm}\\
+& 1.51cm < 1.66cm \Rightarrow \text{Verifica} \quad \surd
+\end{align*}
+Por lo tanto verifica el requerimiento de deformación especificado en el reglamento.\\
+\end{itemize}

@@ -1,0 +1,38 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[utf8]{inputenc}
+\setcounter{secnumdepth}{3} % para numerar los niveles de secciones, subsecciones, subsubsecciones
+\usepackage[spanish,activeacute]{babel} % para establecer idioma
+%\usepackage[english]{babel}
+%\usepackage{cmbright} % para cambiar estilo de texto
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage{calligra}
+\usepackage{booktabs} % para tablas
+%\usepackage{pythonhighlight}
+\PassOptionsToPackage{hyphens}{url}\usepackage[colorlinks=true,urlcolor=blue,citecolor=black,linkcolor=blue,hyperindex=true]{hyperref}
+\usepackage[labelfont=bf]{caption}
+\usepackage[section]{placeins}
+\usepackage{textcomp}
+\usepackage{acro}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{float}  % para forzar ubicacion de imagenes
+\usepackage{pdflscape} % para cambiar orientación de pagina landscape
+\usepackage[margin=1. in]{geometry} % Margenes
+\usepackage{graphicx}
+\graphicspath{ {files/} {chapters/chapter_1/images}}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+%\rhead{Share\LaTeX}
+\fancyhead[C]{Universidad Nacional de la Patagonia San Juan Bosco \\Cátedra: Hormigón I}
+
+\rfoot{\thepage}
+\lfoot{Andrés Cintas}
+
+\begin{document}
+\include{chapters/chapter_1/chapter1}
+
+\end{document}

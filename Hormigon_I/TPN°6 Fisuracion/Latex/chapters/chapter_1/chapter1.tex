@@ -1,0 +1,157 @@
+\begin{center}
+\underline{\Large{T.P.N°6: Fisuración}}
+\end{center}
+
+\begin{enumerate}
+\item Se tiene una viga perteneciente a una platea de fundación sometida a un momento flector bajo cargas de servicio $M_s = 8 t.m$, con una sección de $b_w = 20 cm$, $h = 50 cm$ y $d = 45 cm$, a la cual debe verificarse a fisuración según CIRSOC 201-05 y CIRSOC 201-82. El hormigón es H-25 según Reglamento CIRSOC 201-05, H-21 según CIRSOC 201-82 y el acero ADN 42/50.\\
+$A_s = 4 \phi 16 mm$\\
+$C_c = 30 mm$\\
+Para el cálculo según el Reglamento CIRSOC 201-05, calcular el valor de la tensión de servicio de las armaduras (fs) comparando los resultados de las expresiones adjuntas con lo propuesto por el Reglamento CIRSOC 201-05 ($f_s = \frac{f_y}{1.5}$):
+\begin{align*}
+& f_s = \frac{M_s}{A_s \cdot z}
+\end{align*}
+o bien:
+\begin{align*}
+& \frac{b_w \cdot C^2}{2} + n \cdot A_s \cdot C - n \cdot A_s \cdot d = 0 \\
+& I_{cr} = \frac{b_w \cdot {C}^3}{3} + n \cdot A_s \cdot (d - C)^2 \\
+& f_s = \frac{M_s}{I_{cr}} \cdot n \cdot (d - C)
+\end{align*}
+\item Efectuar la misma verificación, pero según la ecuación de Gergely-Lutz.\\
+Nota: todas las medidas son tentativas, debiendo optimizarse las mismas para lograr una estructura adecuada.
+\end{enumerate}
+
+\newpage
+\begin{center}
+\underline{\Large{Solución}}
+\end{center}
+
+\begin{enumerate}
+\item \underline{Fisuración aplicando reglamento CIRSOC 201-05}
+
+\underline{Datos:}\\
+Hormigón H-25 $\Rightarrow f'c = 25 MPa$\\
+Acero ADN 42/50 $\Rightarrow fy = 420 MPa$\\
+$b_w = 20cm $\\
+$h = 50cm $\\
+$d= 45cm $\\
+Recubrimiento $Cc = 30mm$\\
+Armadura ppal $A_s = 4 \phi 16mm \Rightarrow 8.04 cm^2$\\
+Estribos $dbe = \phi 8mm$\\
+
+\begin{itemize}
+\item \underline{Profundidad del eje neutro - C}
+\begin{align*}
+& n = \frac{E_s}{E_c} = \frac{200000 MPa}{4700 \cdot \sqrt{25MPa}} = 8.51 \\
+& \frac{b_w \cdot C^2}{2} + n \cdot A_s \cdot C - n \cdot A_s \cdot d = 0 \\
+& \frac{20cm \cdot C^2}{2} + 8.51 \cdot 8.04cm^2 \cdot C - 8.51 \cdot 8.04cm^2 \cdot 45cm = 0 \\
+& \text{Resolviendo Baskara tenemos} \Rightarrow C=\framebox{$14.46cm$}
+\end{align*}
+
+\item \underline{Momento de inercia}
+\begin{align*}
+& I_{cr} = \frac{b_w \cdot C^3}{3} + n \cdot A_s \cdot (d - C)^2 \\
+& I_{cr} = \frac{20cm \cdot (14.46cm)^3}{3} + 8.51 \cdot 8.04cm^2 \cdot (45cm - 14.46cm)^2 \\
+& I_{cr} = \framebox{$83971.56cm^4$}
+\end{align*}
+
+\item \underline{Tensión de servicio}
+\begin{align*}
+& f_s = \frac{M_s}{I_{cr}} \cdot n \cdot (d - C) \\
+& f_s = \frac{800000Kg.cm}{83971.56cm^4} \cdot 8.51 \cdot (45cm - 14.46cm) \\
+& f_s = 2476 \frac{Kg}{cm^2} = \framebox{$247.6MPa$} \\
+& 247.6MPa \leq 420MPa \quad \surd \quad \text{Verifica}
+\end{align*}
+
+\item \underline{Separaciones}
+
+\[ S_{existente} \leq \left\{ \begin{array}{ll}
+         380 \cdot \frac{280}{f_s} - 2.5 \cdot Cc & \\
+         300 \cdot \frac{280}{f_s} & \end{array} \right. \]
+
+\[ S_{existente} \leq \left\{ \begin{array}{ll}
+         380 \cdot \frac{280MPa}{247.6MPa} - 2.5 \cdot 30mm = 354mm & \\
+         300 \cdot \frac{280MPa}{247.6MPa} = 339mm & \end{array} \right. \]
+
+\begin{align*}
+& S_{existente} \leq 339mm \quad \surd \quad \text{Verifica}
+\end{align*}
+
+\begin{center}
+\underline{\Large{Gergely - Lutz}}
+\end{center}
+
+\underline{Datos:}\\
+\begin{align*}
+& A_s = 4 \phi 16mm \Rightarrow 8.04 cm^2\\
+& \beta = 1.20 \\
+& f_s = 247.6MPa \\
+& d_c = Cc + dbe + \frac{db}{2} \\
+& d_c = 30mm + 8mm + \frac{16mm}{2} = \framebox{$46mm$}
+\end{align*}
+
+\item \underline{Area}
+\begin{align*}
+& A = \frac{2 \cdot d_c \cdot b_w}{\text{n° de barras}} \\
+& A = \frac{2 \cdot 46mm \cdot 200mm}{4} \\
+& A = \framebox{$4600mm^2$}
+\end{align*}
+
+\item \underline{Ancho de fisura}
+\begin{align*}
+& W_k = \frac{1}{90000} \cdot f_s \cdot \beta \cdot \sqrt[3]{d_c \cdot A} \\
+& W_k = \frac{1}{90000} \cdot 247.6MPa \cdot 1.20 \cdot \sqrt[3]{46mm \cdot 4600mm^2} \\
+& W_k = \framebox{$0.196mm$} \\
+& W_{kmax} = 0.30mm \quad \text{de tabla}\\
+& 0.196mm \leq 0.30mm \quad \surd \quad \text{Verifica}
+\end{align*}
+\underline{Considerando la expresión aproximada para $f_s$:}
+\begin{align*}
+& f_s = \frac{M_s}{A_s \cdot z}\\
+& \text{siendo } z \approx 0.85 \cdot d \text{ ó } 0.90 \cdot d \\
+& f_s = \frac{800000Kg.cm}{ 8.04 cm^2 \cdot 0.90 \cdot 45cm}\\
+& f_s = \framebox{$245MPa$} \\
+& W_k = \frac{1}{90000} \cdot 245MPa \cdot 1.20 \cdot \sqrt[3]{46mm \cdot 4600mm^2} \\
+& W_k = \framebox{$0.194mm$} \\
+& W_{kmax} = 0.30mm \quad \text{de tabla}\\
+& 0.194mm \leq 0.30mm \quad \surd \quad \text{Verifica}
+\end{align*}
+\end{itemize}
+\newpage
+\item \underline{Fisuración aplicando reglamento CIRSOC 201-82}
+
+\underline{Datos:}\\
+Hormigón H-21 \\
+Acero ADN 42/50 \\
+$b_0 = 20cm $\\
+$d = 50cm $\\
+$h = 45cm $\\
+
+\begin{itemize}
+\item \underline{1° Criterio}
+\begin{align*}
+& K_h = \frac{h}{\sqrt{\frac{M_s}{b_0}}} \\
+& K_h = \frac{45cm}{\sqrt{\frac{8t.m}{0.20m}}} = 7.11 \Rightarrow K_x = \framebox{$0.313$} \rightarrow \text{de tabla para H-21}
+\end{align*}
+\underline{Sección de H° fisurada}
+\begin{align*}
+& F_{bz} = b_0 \cdot h \cdot (1-K_x) \\
+& F_{bz} = 20cm \cdot 45cm \cdot (1-0.313) \\
+& F_{bz} = \framebox{$618.3cm^2$} \\
+& \mu_z = \frac{A_s}{F_{bz}} = \frac{8.04cm^2}{618.3cm^2} = 0.013 = \framebox{$1.3\%$} \Rightarrow \text{No verifica 1° Criterio}
+\end{align*}
+
+\item \underline{2° Criterio}
+\begin{align*}
+&\phi_{adoptado} = 16mm \Rightarrow \text{de tablas } \phi_{necesario} = 16mm \\
+&\text{Para fisuración Normal, de tabla columna b} \Rightarrow \text{Verifica}
+\end{align*}
+
+\item \underline{3° Criterio}
+\begin{align*}
+&\phi_{adoptado} \leq \frac{1 \cdot 10^4 \cdot r \cdot \mu_z}{\sigma_s^2} \rightarrow \text{con $r = 120$ de tabla}\\
+&\phi_{adoptado} \leq \frac{1 \cdot 10^4 \cdot 120 \cdot 1.3\%}{(247.6MPa)^2} = \framebox{$25.44mm$} \\
+&\phi_{adoptado} = 16mm \leq 25.44mm \Rightarrow \text{Verifica}
+\end{align*}
+
+\end{itemize}
+\end{enumerate}

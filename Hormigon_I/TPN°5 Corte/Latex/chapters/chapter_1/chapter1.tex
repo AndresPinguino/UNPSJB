@@ -1,0 +1,193 @@
+\begin{center}
+\underline{\Large{T.P.N°5: Corte}}
+\end{center}
+
+\begin{enumerate}
+\item 1) a) Diseñar al corte una viga con las características anexas. b) Dibujar la sección de la viga, indicando recubrimientos, diámetros de barras, etc. Realizar el cálculo según Reglamento CIRSOC 201-05 y CIRSOC 201-82 y comparar los resultados.\\
+Sección Transversal:\\
+bw = 0,20 m; h = 0,50 m\\
+l = 5 m\\
+Vúltimo = 95 KN\\
+Vservicio = 80 KN\\
+\end{enumerate}
+
+\begin{center}
+\underline{\Large{Solución}}
+\end{center}
+
+\begin{enumerate}
+\item \underline{Corte aplicando reglamento CIRSOC 201-05}
+
+\underline{Datos:}\\
+Hormigón H-25 $\Rightarrow f'c = 250 \frac{Kg}{cm^2} = 25 MPa$\\
+Acero ADN 42/50 $\Rightarrow fy = 42 \frac{KN}{cm^2} = 420 MPa$\\
+$b_w = 0.20m $\\
+$h = 0.5m $\\
+$d= 0.456m $\\
+Recubrimiento $Cc = 3cm$\\
+Armadura ppal $db = \phi 16mm$\\
+Estribos $dbe = \phi 6mm$\\
+Largo $l = 5m$\\
+$V_u = 95KN$\\
+
+
+\begin{itemize}
+\item \underline{Estado de cargas}
+\begin{align*}
+& V_n = \frac{V_u}{\phi} = \frac{95KN}{0.75} = \framebox{$126.67KN$}\\
+& V_c = \frac{1}{6} \cdot \sqrt{f'c} \cdot b_w \cdot d\\
+& V_c = \frac{1}{6} \cdot \sqrt{25MPa} \cdot 0.20m \cdot 0.456m \cdot \frac{1000KN}{1MN} = \framebox{$76KN$}\\
+& V_s = V_n - V_c = 126.67KN - 76KN = \framebox{$50.77KN$}
+\end{align*}
+
+\item \underline{Verificación Bielas comprimidas}
+\begin{align*}
+& V_s \leq \frac{2}{3} \cdot \sqrt{f'c} \cdot b_w \cdot d\\
+& V_s \leq \frac{2}{3} \cdot \sqrt{25MPa} \cdot 0.20m \cdot 0.456m \cdot \frac{1000KN}{1MN} = \framebox{$304KN$}\\
+& V_s \leq 304KN\\
+& 50.77KN \leq 304KN \quad \surd \quad \text{Verifica}
+\end{align*}
+
+\item \underline{Armadura}
+\begin{align*}
+& \frac{A_v}{s} = \frac{V_s}{d \cdot fy} = \frac{50.77KN}{0.456m \cdot 42 \frac{KN}{cm^2}}\\
+& \frac{A_v}{s} = \framebox{$2.64 \frac{cm^2}{m}$}
+\end{align*}
+
+\item \underline{Armadura Mínima}
+\begin{align*}
+& \frac{A_s}{s} \geq 0.33 \cdot \frac{b_w}{fy}\\ 
+& \frac{A_s}{s} \geq 0.33 \cdot \frac{0.20m}{420MPa} \cdot 10000 = \framebox{$1.587 \frac{cm^2}{m}$}\\
+& \frac{A_s}{s} \geq 1.587 \frac{cm^2}{m}\\
+& 2.64 \frac{cm^2}{m} \geq 1.587 \frac{cm^2}{m} \quad \surd \quad \text{Verifica}
+\end{align*}
+Se adopta $\phi$ 6mm cada 20cm $(2.82 \frac{cm^2}{m})$\\
+\begin{align*}
+& \frac{A_v}{s} = \frac{\frac{\pi \cdot (dbe)^2}{4}}{s}\cdot \text{n° de ramas}\\
+& \frac{A_v}{s} = \frac{\frac{\pi \cdot (0.6cm)^2}{4}}{0.20m}\cdot \text{2 ramas}\\
+& \frac{A_v}{s} = \framebox{$2.82 \frac{cm^2}{m}$}
+\end{align*}
+
+\item \underline{Separaciones}
+\begin{align*}
+& V_s \leq \frac{1}{3} \cdot \sqrt{f'c} \cdot b_w \cdot d\\
+& V_s \leq \frac{1}{3} \cdot \sqrt{25MPa} \cdot 0.20m \cdot 0.456m \cdot \frac{1000KN}{1MN} = \framebox{$152KN$}\\
+& V_s \leq 152KN\\
+& 50.77KN \leq 152KN \quad \surd \quad \text{Verifica}
+\end{align*}
+
+\[ S_{max} = 0.20m \leq \left\{ \begin{array}{ll}
+         \frac{d}{2}= \frac{0.456m}{2} \approx 0.23m \quad \surd \quad \text{Verifica} & \\
+         0.40m \quad \surd \quad \text{Verifica} & \end{array} \right. \]
+\end{itemize}
+\newpage
+\item \underline{Corte aplicando reglamento CIRSOC 201-82}
+
+\underline{Datos:}\\
+Hormigón H-21 $\Rightarrow \beta_R = 175 \frac{Kg}{cm^2}$\\
+Acero ADN 42/50 $\Rightarrow \beta_S = 4200 \frac{Kg}{cm^2}$\\
+$b_0 = 20cm $\\
+$d = 50cm $\\
+$h= 45,6cm $\\
+Recubrimiento $r = 3cm$\\
+Armadura ppal $db = \phi 16mm$\\
+Estribos $dbe = \phi 6mm$\\
+Largo $l = 5m$\\
+$M_{tramo} = 5.5 t.m$\\
+$M_{apoyo} = 7 t.m$\\
+$Q = 8 t$\\
+
+\begin{itemize}
+\item \underline{Flexión en el tramo}
+\begin{align*}
+& m_u = \frac{M_{tramo} \cdot \gamma}{b_0 \cdot h^2 \cdot \beta_R} \\
+& m_u= \frac{5.5 t.m \cdot 1.75 \cdot 1000 \cdot 100}{20cm \cdot (45.6cm)^2 \cdot 175 \frac{Kg}{cm^2}} = \framebox{$0.132$}\\
+\end{align*}
+
+\begin{itemize}
+\item \underline{Cuantía mecánica}
+\begin{align*}
+& W_0 = \frac{1- \sqrt{1-2.10 \cdot m_u}}{1.05} \\
+& W_0 = \frac{1- \sqrt{1-2.10 \cdot 0.132}}{1.05} = \framebox{$0.143$}\\
+& 0.03 < W_0 < 0.44\\
+& 0.03 < 0.143 < 0.44 \quad \surd \quad \text{Verifica}
+\end{align*}
+
+\item \underline{Cuantía geométrica}
+\begin{align*}
+&\mu_0 = W_0 \cdot \frac{\beta_R}{\beta_S} = 0.143 \cdot \frac{175 \frac{Kg}{cm^2}}{4200 \frac{Kg}{cm^2}} = \framebox{$0.006$}\\
+&\mu_0 > 0.001\\
+& 0.006 > 0.001 \quad \surd \quad \text{Verifica}
+\end{align*}
+
+\item \underline{Armadura}
+\begin{align*}
+& A_s = \mu_0 \cdot b_0 \cdot h = 0.006 \cdot 20cm \cdot 45.6cm = \framebox{$5.47cm^2$}
+\end{align*}
+Adopto $3 \phi 16mm \quad (6.03cm^2)$
+\end{itemize}
+
+\item \underline{Flexión en el apoyo}
+\begin{align*}
+& m_u = \frac{M_{tramo} \cdot \gamma}{b_0 \cdot h^2 \cdot \beta_R} \\
+& m_u= \frac{7 t.m \cdot 1.75 \cdot 1000 \cdot 100}{20cm \cdot (45.6cm)^2 \cdot 175 \frac{Kg}{cm^2}} = \framebox{$0.168$}\\
+\end{align*}
+
+\begin{itemize}
+\item \underline{Cuantía mecánica}
+\begin{align*}
+& W_0 = \frac{1- \sqrt{1-2.10 \cdot m_u}}{1.05} \\
+& W_0 = \frac{1- \sqrt{1-2.10 \cdot 0.168}}{1.05} = \framebox{$0.187$}\\
+& 0.03 < W_0 < 0.44\\
+& 0.03 < 0.187 < 0.44 \quad \surd \quad \text{Verifica}
+\end{align*}
+
+\item \underline{Cuantía geométrica}
+\begin{align*}
+&\mu_0 = W_0 \cdot \frac{\beta_R}{\beta_S} = 0.187 \cdot \frac{175 \frac{Kg}{cm^2}}{4200 \frac{Kg}{cm^2}} = \framebox{$0.0078$}\\
+&\mu_0 > 0.001\\
+& 0.0078 > 0.001 \quad \surd \quad \text{Verifica}
+\end{align*}
+
+\item \underline{Armadura}
+\begin{align*}
+& A_s = \mu_0 \cdot b_0 \cdot h = 0.0078 \cdot 20cm \cdot 45.6cm = \framebox{$7.09cm^2$}
+\end{align*}
+Adopto $4 \phi 16mm \quad (8.04cm^2)$
+\end{itemize}
+\newpage
+\item \underline{Corte}
+\begin{align*}
+& \text{Para calidad de hormigón H-21 tenemos:}\\
+& \tau_{012} = 7.5 \frac{Kg}{cm^2}\\
+& \tau_{02} = 18 \frac{Kg}{cm^2}\\
+& \tau_{03} = 30 \frac{Kg}{cm^2}
+\end{align*}
+
+\begin{align*}
+& z = 085 \cdot h = 0.85 \cdot 45,6cm = \framebox{$38.76cm$}\\
+& \tau = \frac{Q}{b_0 \cdot z} = \frac{8t \cdot 1000\frac{Kg}{t}}{20cm \cdot 38.76cm} = \framebox{$10.32 \frac{Kg}{cm^2}$}\\
+& \text{Si } \tau_{012} < \tau < \tau_{02} \text{ entonces:}\\
+& 7.5 \frac{Kg}{cm^2} < 10.32 \frac{Kg}{cm^2} < 18 \frac{Kg}{cm^2}\\
+& \tau_{calculo} = \frac{\tau^2}{\tau_{02}} = \frac{(10.32 \frac{Kg}{cm^2})^2}{18 \frac{Kg}{cm^2}} = \framebox{$5.92 \frac{Kg}{cm^2}$}\\
+\end{align*}
+
+\item \underline{Armadura}
+\begin{align*}
+& A_s = \frac{\tau_{calculo} \cdot 1.75 \cdot b_0}{\beta_S} = \frac{5.92 \frac{Kg}{cm^2} \cdot 1.75 \cdot 20cm \cdot 100\frac{cm}{m}}{4200 \frac{Kg}{cm^2}}= \framebox{$4.93 \frac{cm^2}{m}$}
+\end{align*}
+Se adopta $\phi 8mm$ cada 15cm en dos ramas
+\begin{align*}
+& \frac{A_s}{s} = \frac{\frac{\pi \cdot (dbe)^2}{4}}{s}\cdot \text{n° de ramas}\\
+& \frac{A_s}{s} = \frac{\frac{\pi \cdot (0.8cm)^2}{4}}{0.15m}\cdot \text{2 ramas}\\
+& \frac{A_s}{s} = \framebox{$6.70 \frac{cm^2}{m}$}\\
+& 6.70 \frac{cm^2}{m} > 4.93 \frac{cm^2}{m} \quad \surd \quad \text{Verifica}
+\end{align*}
+
+\item \underline{Separaciones}
+
+\[ S_{max} = 15cm \leq \left\{ \begin{array}{ll}
+         0.6 \cdot d = 0.6 \cdot 50cm = 30cm \quad \surd \quad \text{Verifica} & \\
+         25cm \quad \surd \quad \text{Verifica} & \end{array} \right. \]
+\end{itemize}
+\end{enumerate}

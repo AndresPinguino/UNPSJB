@@ -1,0 +1,20 @@
+Escalas Construcción civil	Zoom Autocad
+
+REDUCCIÓN	1:5	200 XP
+		1:10	100 XP
+		1:20	50 XP
+		1:50	20 XP
+		1:100	10 XP
+		1:200	5 XP
+		1:500	2 XP
+		1:1000	1 XP
+
+OTRAS		1:75	13.33 XP
+
+NATURAL	1:1	1000 XP
+
+AMPLIACIÓN	2:1	2000 XP
+		5:1	5000 XP
+		10:1	10000 XP
+		
+		1:75	13,33 XP
