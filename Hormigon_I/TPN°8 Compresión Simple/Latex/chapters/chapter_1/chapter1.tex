@@ -1,0 +1,76 @@
+\begin{center}
+\underline{\Large{T.P.N°8: Compresión Simple}}
+\end{center}
+
+\begin{enumerate}
+\item a) Determinar la sección y armadura necesaria para una columna rectangular que debe soportar un esfuerzo normal por peso propio de 24 tn y por sobrecarga de 15 tn. Efectuar el cálculo siguiendo los parámetros del CIRSOC 201-05. El hormigón es H-25 según CIRSOC 201-05.\\
+b) Dibujar la sección.
+
+\item Determinar la capacidad máxima a compresión simple de una columna de 25 cm por 25 cm de lado según CIRSOC 201-05 con una armadura longitudinal de $4 \phi 16mm$. El hormigón es H-20 según CIRSOC 201-05.
+\end{enumerate}
+
+\begin{center}
+\underline{\Large{Solución}}
+\end{center}
+
+\begin{enumerate}
+\item \underline{Proyecto de una columna sometida a Compresión Simple según CIRSOC 201-05}
+
+\underline{Datos:}\\
+Hormigón H-25 $\Rightarrow f'c = 25 MPa = 250 \frac{Kg}{cm^2}$\\
+Acero ADN 42/50 $\Rightarrow fy = 420 MPa = 4200 \frac{Kg}{cm^2}$\\
+$P_D = 24000Kg$ \\
+$P_L = 15000Kg$ \\
+Recubrimiento $Cc = 2cm$\\
+
+\begin{itemize}
+\item \underline{Estado de cargas}
+\begin{align*}
+& P_u = 1.2 \cdot P_D + 1.6 \cdot P_L = 1.2 \cdot 24000Kg  + 1.6 \cdot 15000Kg = \framebox{$52800Kg$}\\
+& P_u = 1.4 \cdot P_D = 1.4 \cdot 24000Kg = 33600Kg\\
+& P_n = \frac{P_u}{0.8 \cdot \phi} = \frac{52800Kg}{0.8 \cdot 0.65} = \framebox{$101538Kg$}
+\end{align*}
+
+\item \underline{Armaduras} \\
+Adopto columna $b = h = 20cm$
+\begin{align*}
+& A_g = b \cdot h = 20cm \cdot 20cm = \framebox{$400cm^2$} \\
+& P_n = 0.85 \cdot f'c \cdot (A_g - A_{st}) + fy \cdot A_{st} \\
+& \Rightarrow A_{st} = \frac{(P_n - 0.85 \cdot f'c \cdot A_g)}{(fy - 0.85 \cdot f'c)} \\
+& A_{st} = \frac{(101538Kg - 0.85 \cdot 250 \frac{Kg}{cm^2} \cdot 400cm^2)}{(4200 \frac{Kg}{cm^2} - 0.85 \cdot 250 \frac{Kg}{cm^2})} \\
+& A_{st} = \framebox{$4.14cm^2$} \\
+& \text{Adopto }4 \phi 12mm \Rightarrow 4.52cm^2
+\end{align*}
+
+\item \underline{Verifico Separaciones} \\
+Estribo mínimo $dbe = \phi 6mm$\\
+\[ S_{adoptada} \leq \left\{ \begin{array}{ll}
+         12 \cdot db = 12 \cdot 1.2cm = 14.4cm & \\
+         b = 20cm & \end{array} \right. \]
+Adopto estribos $\phi 6mmm$ cada 12cm.
+\end{itemize}
+
+\item \underline{Verificación de una columna sometida a Compresión Simple según CIRSOC 201-05}
+
+\underline{Datos:}\\
+Hormigón H-20 $\Rightarrow f'c = 20 MPa = 200 \frac{Kg}{cm^2}$\\
+Acero ADN 42/50 $\Rightarrow fy = 420 MPa = 4200 \frac{Kg}{cm^2}$\\
+$b = h = 25cm \Rightarrow A_g = b \cdot h = 25cm \cdot 25cm = 625cm^2$\\
+$4 \phi 16mm \Rightarrow A_{st} = 8.04cm^2$\\
+Recubrimiento $Cc = 2cm$\\
+
+\begin{itemize}
+\item \underline{Cuantía}
+\begin{align*}
+& \rho = \frac{A_{st}}{A_g} = \frac{8.04cm^2}{625cm^2} = 0.0128 > 0.01 \Rightarrow \text{Verifica} \\
+\end{align*}
+
+\item \underline{Carga última}
+\begin{align*}
+& P_u = 0.65 \cdot 0.8 \cdot [0.85 \cdot f'c \cdot (A_g - A_{st}) + fy \cdot A_{st}] \\
+& P_u = 0.65 \cdot 0.8 \cdot [0.85 \cdot 200 \frac{Kg}{cm^2} \cdot (625cm^2 - 8.04cm^2) + 4200 \frac{Kg}{cm^2} \cdot 8.04cm^2] \\
+& P_u = 72098Kg = \framebox{$720.98KN$}
+\end{align*}
+
+\end{itemize}
+\end{enumerate}
