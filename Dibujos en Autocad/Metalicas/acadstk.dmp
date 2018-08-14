@@ -1,0 +1,35 @@
+[Main]
+DumpEntries=1
+[AcadCrashDump1]
+ExeTimeDateStamp=0x3E4CB47F
+CrashTimeDateStamp=0x5B4562B9
+acadVer=16.0s (LMS Tech)
+WinVer=0x1DB00106
+DumpType=Exception
+ExceptionCode=0xC0000005
+ExceptionFlags=0x0
+ExceptionAddress=0x7C14A0DB
+NumberParameters=0x2
+ExceptionInformation0=0x0
+ExceptionInformation1=0x62F3C53C
+ContextFlags=0x1003F
+SegGs=0x0
+SegFs=0x3B
+SegEs=0x23
+SegDs=0x23
+Edi=0xB5D4E0
+Esi=0x62F3C53C
+Ebx=0x0
+Edx=0xCB
+Ecx=0x62F3C53C
+Eax=0x7C14A0D7
+Ebp=0x12FEB8
+Eip=0x7C14A0DB
+SegCs=0x1B
+EFlags=0x210206
+Esp=0x12FEA4
+SegSs=0x23
+ReferenceAddr=0x9F6A50
+ReferenceName=_WinMain@16
+StackWalk0=7C14A0B5,90DB,1,SymExport,Ordinal2415+E,C:\Program Files\AutoCAD 2004\MFC70.DLL
+StackWalk1=0,90B5,1,SymExport,Ordinal983+1F,C:\Program Files\AutoCAD 2004\MFC70.DLL

@@ -147,6 +147,9 @@ $h_{adoptado} = \framebox{$14 cm$} \geq 13cm$ Verifica \\
 & \text{Piso + Carpeta} \rightarrow 0.025m \cdot 2000 \frac{Kg}{m^3} = 50 \frac{Kg}{m^2}\\
 & \text{Cielorraso aplicado} \rightarrow  0.02m \cdot 1300 \frac{Kg}{m^3} = 26 \frac{Kg}{m^2}\\
 & D = 858 \frac{Kg}{m^2}\\
+& \frac{l_1}{l_2} = \frac{3.60m}{3.60m} = 1 \Rightarrow \text{De tabla tenemos los coeficientes} \\
+& \text{Muro paralelo al lado corto} = 1.60 \\
+& \text{Muro paralelo al lado largo} = 1.60 \\
 & D_{pared} = \frac{(0.10m \cdot (1m+1m+2.28) \cdot 2.7m \cdot 1700 \frac{Kg}{m^3}) \cdot 1.60}{3.60m \cdot 3.60m}\\
 & + \frac{(0.10m \cdot 1.81m \cdot 2.7m \cdot 1700 \frac{Kg}{m^3}) \cdot 1.60}{3.60m \cdot 3.60m}\\
 & D_{pared} = 345 \frac{Kg}{m^2} \\
@@ -492,7 +495,7 @@ Consideramos la pared ocupando todo el ancho de la losa en una dirección.
 & Mu_y = \frac{q_u \cdot (l_{menor})^2}{m_{y}} = \frac{1.27 \frac{t}{m^2} \cdot (3.90m)^2}{93.46} \framebox{$0.20 \frac{t \cdot m}{m}$}
 \end{align*}
 
-Cambio de sustentación
+Debido a que la losa L108 no es compatible con la losa L109 es que analizamos la siguiente sustentación.\\
 
 \begin{figure}[H]
 \begin{center}
@@ -823,8 +826,8 @@ Cambio de sustentación
 & 0.62 + (1.11-0.84) = 0.89\\
 & \text{Adopto} \quad \framebox{0.89} \quad \text{en el tramo}\\
 \end{align*}
-
 \end{itemize}
+La diferencia entre los momentos superan el 40\% del promedio de los mismos, adoptamos de todas formas el valor promedio dado que esta diferencia es mínima.
 \newpage
 \item \underline{Momentos flectores - Nivel 3}\\
 \begin{itemize}
@@ -1044,33 +1047,36 @@ Cambio de sustentación
 & 0.51 + (0.92-0.76) = 0.67\\
 & \text{Adopto} \quad \framebox{0.67} \quad \text{en el tramo}\\
 \end{align*}
-
 \end{itemize}
+
+La diferencia entre los momentos superan el 40\% del promedio de los mismos, adoptamos de todas formas el valor promedio dado que esta diferencia es mínima.
 \newpage
 \item \underline{Cálculo de Armaduras}\\
+Se calcula la armadura para los momentos máximos obtenidos.
 \begin{itemize}
 \item Armadura Superior
 
 \begin{align*}
 & M_u = 1.67 \frac{t \cdot m}{m} \\
 & M_n = \frac{M_u}{\phi} = \frac{1.67 \frac{t \cdot m}{m}}{0.9} = 1.85 \frac{t \cdot m}{m} \Rightarrow 0.0185 \frac{MN \cdot m}{m} \\
-& d = h -db - Cc - \frac{db}{2} = 14cm - 1cm - 2cm - \frac{1cm}{2}= 10.5cm \\
-& Kd = \frac{d}{\sqrt{\frac{M_n}{b}}} = \frac{0.105m}{\sqrt[]{\frac{0.0185 \frac{MN \cdot m}{m}}{1m}}} = 0.771 \Rightarrow Ke = 24.856 \\
-& A_s = Ke \cdot \frac{M_n}{d} = 24.856 \cdot \frac{0.0185 \frac{MN \cdot m}{m}}{0.105m} = 4.38 \frac{cm^2}{m}\\
+& d = h -db - Cc - \frac{db}{2} = 14cm - 0.8cm - 2cm - \frac{0.8cm}{2}= 10.8cm \\
+& Kd = \frac{d}{\sqrt{\frac{M_n}{b}}} = \frac{0.108m}{\sqrt[]{\frac{0.0185 \frac{MN \cdot m}{m}}{1m}}} = 0.794 \Rightarrow Ke = 24.766 \\
+& A_s = Ke \cdot \frac{M_n}{d} = 24.766 \cdot \frac{0.0185 \frac{MN \cdot m}{m}}{0.108m} = \framebox{$4.24 \frac{cm^2}{m}$}\\
 & As_{min} = 0.0018 \cdot b \cdot h = 0.0018 \cdot 100cm \cdot 14cm = 2.52 \frac{cm^2}{m}
 \end{align*}
-
-Se adopta A° superior $\phi$ 10 cada 17cm $\rightarrow \framebox{$4.62 \frac{cm^2}{m}$}$ \\
+La armadura mínima se cubre con $\phi$ 8 cada 20cm $\rightarrow \framebox{$2.51 \frac{cm^2}{m}$}$ \\
+\\
+Se adopta A° superior $\phi$ 8 cada 10cm $\rightarrow \framebox{$5.03 \frac{cm^2}{m}$}$ \\
 
 \underline{Verificación de separaciones}\\
 
-\[ s = 17cm \leq \left\{ \begin{array}{ll}
+\[ s = 10cm \leq \left\{ \begin{array}{ll}
          2.5 \cdot h = 2.5 \cdot 14cm = 35cm \quad \surd & \\
-         25 \cdot db = 25 \cdot 1cm = 25cm \quad \surd &\\
+         25 \cdot db = 25 \cdot 0.8cm = 20cm \quad \surd &\\
          30cm \quad \surd & \end{array} \right. \] 
          
-\[ s = 17cm \geq \left\{ \begin{array}{ll}
-         db = 1cm \quad \surd & \\
+\[ s = 10cm \geq \left\{ \begin{array}{ll}
+         db = 0.8cm \quad \surd & \\
          \geq 2.5cm \quad \surd &\\
          \geq \frac{4}{3} \cdot \text{Tamaño máximo del agregado} & \end{array} \right. \] 
 
@@ -1079,23 +1085,77 @@ Se adopta A° superior $\phi$ 10 cada 17cm $\rightarrow \framebox{$4.62 \frac{cm
 \begin{align*}
 & M_u = 1.61 \frac{t \cdot m}{m} \\
 & M_n = \frac{M_u}{\phi} = \frac{1.61 \frac{t \cdot m}{m}}{0.9} = 1.78 \frac{t \cdot m}{m} \Rightarrow 0.0178 \frac{MN \cdot m}{m} \\
-& d = h -db - Cc - \frac{db}{2} = 14cm - 1cm - 2cm - \frac{1cm}{2}= 10.5cm \\
-& Kd = \frac{d}{\sqrt{\frac{M_n}{b}}} = \frac{0.105m}{\sqrt[]{\frac{0.0178 \frac{MN \cdot m}{m}}{1m}}} = 0.785 \Rightarrow Ke = 24.856 \\
-& A_s = Ke \cdot \frac{M_n}{d} = 24.856 \cdot \frac{0.0178 \frac{MN \cdot m}{m}}{0.105m} = 4.21 \frac{cm^2}{m}\\
+& d = h -db - Cc - \frac{db}{2} = 14cm - 0.8cm - 2cm - \frac{0.8cm}{2}= 10.8cm \\
+& Kd = \frac{d}{\sqrt{\frac{M_n}{b}}} = \frac{0.108m}{\sqrt[]{\frac{0.0178 \frac{MN \cdot m}{m}}{1m}}} = 0.809 \Rightarrow Ke = 24.734 \\
+& A_s = Ke \cdot \frac{M_n}{d} = 24.734 \cdot \frac{0.0178 \frac{MN \cdot m}{m}}{0.108m} = \framebox{$4.07 \frac{cm^2}{m}$}\\
 & As_{min} = 0.0018 \cdot b \cdot h = 0.0018 \cdot 100cm \cdot 14cm = 2.52 \frac{cm^2}{m}
 \end{align*}
-
-Se adopta A° inferior $\phi$ 10 cada 17cm $\rightarrow \framebox{$4.62 \frac{cm^2}{m}$}$ \\
+La armadura mínima se cubre con $\phi$ 8 cada 20cm $\rightarrow \framebox{$2.51 \frac{cm^2}{m}$}$ \\
+\\
+Se adopta A° inferior $\phi$ 8 cada 12cm $\rightarrow \framebox{$4.19 \frac{cm^2}{m}$}$ \\
 
 \underline{Verificación de separaciones}\\
 
-\[ s = 17cm \leq \left\{ \begin{array}{ll}
+\[ s = 12cm \leq \left\{ \begin{array}{ll}
          2.5 \cdot h = 2.5 \cdot 14cm = 35cm \quad \surd & \\
-         25 \cdot db = 25 \cdot 1cm = 25cm \quad \surd &\\
+         25 \cdot db = 25 \cdot 0.8cm = 20cm \quad \surd &\\
          30cm \quad \surd & \end{array} \right. \] 
          
-\[ s = 17cm \geq \left\{ \begin{array}{ll}
-         db = 1cm \quad \surd & \\
+\[ s = 12cm \geq \left\{ \begin{array}{ll}
+         db = 0.8cm \quad \surd & \\
+         \geq 2.5cm \quad \surd &\\
+         \geq \frac{4}{3} \cdot \text{Tamaño máximo del agregado} & \end{array} \right. \] 
+
+A continuación calculamos la armadura para una nueva pareja de momentos con el fin de optimizar el armado.\\
+\item Armadura Superior
+
+\begin{align*}
+& M_u = 1.43 \frac{t \cdot m}{m} \\
+& M_n = \frac{M_u}{\phi} = \frac{1.43 \frac{t \cdot m}{m}}{0.9} = 1.58 \frac{t \cdot m}{m} \Rightarrow 0.0158 \frac{MN \cdot m}{m} \\
+& d = h -db - Cc - \frac{db}{2} = 14cm - 0.8cm - 2cm - \frac{0.8cm}{2}= 10.8cm \\
+& Kd = \frac{d}{\sqrt{\frac{M_n}{b}}} = \frac{0.108m}{\sqrt[]{\frac{0.0158 \frac{MN \cdot m}{m}}{1m}}} = 0.859 \Rightarrow Ke = 24.622 \\
+& A_s = Ke \cdot \frac{M_n}{d} = 24.622 \cdot \frac{0.0158 \frac{MN \cdot m}{m}}{0.108m} = \framebox{$3.60 \frac{cm^2}{m}$}\\
+& As_{min} = 0.0018 \cdot b \cdot h = 0.0018 \cdot 100cm \cdot 14cm = 2.52 \frac{cm^2}{m}
+\end{align*}
+La armadura mínima se cubre con $\phi$ 8 cada 20cm $\rightarrow \framebox{$2.51 \frac{cm^2}{m}$}$ \\
+\\
+Se adopta A° superior $\phi$ 8 cada 12cm $\rightarrow \framebox{$4.19 \frac{cm^2}{m}$}$ \\
+
+\underline{Verificación de separaciones}\\
+
+\[ s = 12cm \leq \left\{ \begin{array}{ll}
+         2.5 \cdot h = 2.5 \cdot 14cm = 35cm \quad \surd & \\
+         25 \cdot db = 25 \cdot 0.8cm = 20cm \quad \surd &\\
+         30cm \quad \surd & \end{array} \right. \] 
+         
+\[ s = 12cm \geq \left\{ \begin{array}{ll}
+         db = 0.8cm \quad \surd & \\
+         \geq 2.5cm \quad \surd &\\
+         \geq \frac{4}{3} \cdot \text{Tamaño máximo del agregado} & \end{array} \right. \] 
+
+\item Armadura Inferior
+
+\begin{align*}
+& M_u = 0.93 \frac{t \cdot m}{m} \\
+& M_n = \frac{M_u}{\phi} = \frac{0.93 \frac{t \cdot m}{m}}{0.9} = 1.03 \frac{t \cdot m}{m} \Rightarrow 0.010 \frac{MN \cdot m}{m} \\
+& d = h -db - Cc - \frac{db}{2} = 14cm - 0.8cm - 2cm - \frac{0.8cm}{2}= 10.8cm \\
+& Kd = \frac{d}{\sqrt{\frac{M_n}{b}}} = \frac{0.108m}{\sqrt[]{\frac{0.010 \frac{MN \cdot m}{m}}{1m}}} = 1.06 \Rightarrow Ke = 24.332 \\
+& A_s = Ke \cdot \frac{M_n}{d} = 24.332 \cdot \frac{0.010 \frac{MN \cdot m}{m}}{0.108m} = \framebox{$2.25 \frac{cm^2}{m}$}\\
+& As_{min} = 0.0018 \cdot b \cdot h = 0.0018 \cdot 100cm \cdot 14cm = 2.52 \frac{cm^2}{m}
+\end{align*}
+La armadura mínima se cubre con $\phi$ 8 cada 20cm $\rightarrow \framebox{$2.51 \frac{cm^2}{m}$}$ \\
+\\
+Se adopta A° inferior $\phi$ 8 cada 20cm $\rightarrow \framebox{$2.51 \frac{cm^2}{m}$}$ \\
+
+\underline{Verificación de separaciones}\\
+
+\[ s = 20cm \leq \left\{ \begin{array}{ll}
+         2.5 \cdot h = 2.5 \cdot 14cm = 35cm \quad \surd & \\
+         25 \cdot db = 25 \cdot 0.8cm = 20cm \quad \surd &\\
+         30cm \quad \surd & \end{array} \right. \] 
+         
+\[ s = 20cm \geq \left\{ \begin{array}{ll}
+         db = 0.8cm \quad \surd & \\
          \geq 2.5cm \quad \surd &\\
          \geq \frac{4}{3} \cdot \text{Tamaño máximo del agregado} & \end{array} \right. \] 
 
