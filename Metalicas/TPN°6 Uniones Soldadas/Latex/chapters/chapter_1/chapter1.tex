@@ -128,8 +128,61 @@ Tensiones de tracción en la soldadura.\\
 & f_n < f_{\text{diseño}} \\
 & 385.67MPa < 172.8MPa \Rightarrow \text{No verifica}
 \end{align*}
-\end{itemize}
 
+Adoptamos un perfil más grande IPN320.\\
+
+\begin{figure}[H]
+\begin{center}
+     \includegraphics[scale = 0.8]{chapters/chapter_1/images/ipn320_perfil.png}
+\end{center}
+\caption{Perfil IPN320}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+     \includegraphics[scale = 0.6]{chapters/chapter_1/images/ipn320.png}
+\end{center}
+\caption{Perfil IPN320 y filetes de soldadura}
+\end{figure}
+\item \underline{Estudio del Punto A}
+\begin{align*}
+& L = 2 \cdot 25.8cm = \framebox{$51.6cm$} \\
+& A_w = 0.707 \cdot W \cdot L \Rightarrow \text{área efectiva} \\
+& A_w = 0.707 \cdot 0.6 cm \cdot 51.6cm = \framebox{$21.89 cm^2$} \\
+\end{align*}
+\newpage
+Tensiones de corte y tracción en la soldadura.\\
+\begin{align*}
+& f_v = \frac{P}{A_w \cdot 10^{-1}} = \frac{40KN}{21.89cm^2 \cdot 10^{-1}} = \framebox{$18.27MPa$} \\
+& J_{x1} = 2 \cdot \frac{b \cdot h^3}{12} = 2 \cdot \frac{(0.707 \cdot 0.6cm) \cdot (25.8cm)^3}{12} = \framebox{$1214.17cm^4$} \\
+& J_{x2} = \frac{b \cdot h^3}{12} + A \cdot y^2 \rightarrow \text{Steiner para los cordones horizontales} \\
+& J_{x2} = 2 \cdot \Big[\frac{13.1cm \cdot (0.707 \cdot 0.6cm)^3}{12} + (0.707 \cdot 0.6cm \cdot 13.1cm) \cdot \Big(16cm+ \frac{0.707 \cdot 0.6cm}{2}\Big)^2\Big] \\
+& J_{x2} = \framebox{$2921.29cm^4$} \\
+& J_x = J_{x1} + J_{x2} = 1214.17cm^4 + 2921.29cm^4 = \framebox{$4135.46cm^4$} \\
+& f_n = \frac{M}{S_w \cdot 10^{-1}} = \frac{M \cdot y_A}{J_x \cdot 10^{-1}} = \frac{4000 KN \cdot cm \cdot \frac{25.8cm}{2}}{4135.46cm^4 \cdot 10^{-1}} = \framebox{$124.77MPa$} \\
+& f_c = \sqrt{f_v^2 + f_n^2} = \sqrt{(18.27MPa)^2 + (124.77MPa)^2} = \framebox{$126.11MPa$} \\
+& f_{\text{diseño}} = 0.6 \cdot (0.6 \cdot F_{exx}) = 0.6 \cdot (0.6 \cdot 480MPa) = \framebox{$172.8MPa$} \\
+& f_c < f_{\text{diseño}} \\
+& 126.11MPa < 172.8MPa \Rightarrow \text{Verifica}
+\end{align*}
+
+\item \underline{Estudio del Punto B}
+
+Tensiones de tracción en la soldadura.\\
+\begin{align*}
+& J_{x1} = 2 \cdot \frac{b \cdot h^3}{12} = 2 \cdot \frac{(0.707 \cdot 0.6cm) \cdot (25.8cm)^3}{12} = \framebox{$1214.17cm^4$} \\
+& J_{x2} = \frac{b \cdot h^3}{12} + A \cdot y^2 \rightarrow \text{Steiner para los cordones horizontales} \\
+& J_{x2} = 2 \cdot \Big[\frac{13.1cm \cdot (0.707 \cdot 0.6cm)^3}{12} + (0.707 \cdot 0.6cm \cdot 13.1cm) \cdot \Big(16cm+ \frac{0.707 \cdot 0.6cm}{2}\Big)^2\Big] \\
+& J_{x2} = \framebox{$2921.29cm^4$} \\
+& J_x = J_{x1} + J_{x2} = 1214.17cm^4 + 2921.29cm^4 = \framebox{$4135.46cm^4$} \\
+& y_B = \frac{h}{2} + 0.707 \cdot W = \frac{32cm}{2} + 0.707 \cdot 0.6cm = \framebox{$16.42cm$} \\
+& f_n = \frac{M}{S_w \cdot 10^{-1}} = \frac{M \cdot y_B}{J_x \cdot 10^{-1}} = \frac{4000 KN \cdot cm \cdot 16.42cm}{4135.46cm^4 \cdot 10^{-1}} = \framebox{$158.86MPa$} \\
+& f_{\text{diseño}} = 0.6 \cdot (0.6 \cdot F_{exx}) = 0.6 \cdot (0.6 \cdot 480MPa) = \framebox{$172.8MPa$} \\
+& f_n < f_{\text{diseño}} \\
+& 158.86MPa < 172.8MPa \Rightarrow \text{Verifica}
+\end{align*}
+\end{itemize}
+\newpage
 \item Redimensionar la unión del ejercicio 1 del TPN° 5.
 \begin{itemize}
 \item \underline{Datos}
@@ -145,7 +198,7 @@ Tensiones de tracción en la soldadura.\\
 \end{center}
 \caption{Perfil UPN160}
 \end{figure}
-\newpage
+
 \begin{align*}
 & \text{Cartela}\\
 & t_1 = 0.952 cm
@@ -160,6 +213,7 @@ Tensiones de tracción en la soldadura.\\
 & \text{Electrodo}\\
 & F_{exx} = 480MPa\\
 \end{align*}
+\newpage
 \item \underline{\textbf{Caso 1:}}
 Adoptamos filetes longitudinales de igual longitud, no se tiene en cuenta la excentricidad de la carga con respecto al plano de soldadura.\\
 \item \underline{Lados del filete}
@@ -279,16 +333,16 @@ La resistencia de diseño de barras traccionadas según el reglamento CIRSOC 301
 & L = 3 \cdot 6cm = 18cm \\
 & U = 1 - \frac{x}{L} = 1 - \frac{1.84cm}{18cm} = \framebox{$0.897$}\\
 & A_n = A_g - 2 \cdot \text{área de agüjeros} = 24cm^2 - 2 \cdot [0.75cm \cdot (1.90cm + 0.2cm)] = \framebox{$20.85cm^2$}\\
-& A_e = U \cdot A_n = 0.897 cdot 20.85cm^2 = \framebox{$18.70cm^2$}\\
+& A_e = U \cdot A_n = 0.897 \cdot 20.85cm^2 = \framebox{$18.70cm^2$}\\
 & P_n = F_u \cdot A_e \cdot 10^{-1} \\
 & P_n = 370MPa \cdot 18.70cm^2 \cdot 10^{-1} = \framebox{$691.99KN$}\\
 & P_u = \phi_t \cdot P_n = 0.75 \cdot 691.99KN = \framebox{$518.99KN$}
 \end{align*}
-Se adoptara entonces el menor de los valores, en este caso $P_u = \framebox{$507.60KN$}$, como:
+Se adoptara entonces como resistencia de diseño el menor de los valores, en este caso $R_d = \framebox{$507.60KN$}$, como:
 \begin{align*}
-& R_d = \framebox{$490.66KN$} \Rightarrow \text{Del trabajo práctico de Uniones abulonadas}\\
+& P_u = \framebox{$450KN$} \Rightarrow \text{Del trabajo práctico de Uniones abulonadas}\\
 & P_u < R_{\text{diseño}} \\
-& 507.60KN < 490.66KN \Rightarrow \text{No Verifica}
+& 450KN < 507.60KN  \Rightarrow \text{Verifica}
 \end{align*}
 
 \item \underline{\textbf{Verificación para unión soldada:}}
@@ -304,11 +358,11 @@ La resistencia de diseño de barras traccionadas según el reglamento CIRSOC 301
 \item \underline{Para rotura en la sección neta:}
 \begin{align*}
 & \phi_t = 0.75 \\
-& U = 1 - \frac{x}{L} = 1 - \frac{1.84cm}{45cm} = \framebox{$0.959$} \\
-& A_e = U \cdot A_g = 0.959 cdot 24cm^2 = \framebox{$23.01cm^2$} \\
+& U = 1 - \frac{x}{L} = 1 - \frac{1.84cm}{38cm} = \framebox{$0.951$} \\
+& A_e = U \cdot A_g = 0.951 \cdot 24cm^2 = \framebox{$22.83cm^2$} \\
 & P_n = F_u \cdot A_e \cdot 10^{-1} \\
-& P_n = 370MPa \cdot 23.01cm^2 \cdot 10^{-1} = \framebox{$851.69KN$}\\
-& P_u = \phi_t \cdot P_n = 0.75 \cdot 851.69KN = \framebox{$638.76KN$}
+& P_n = 370MPa \cdot 22.83cm^2 \cdot 10^{-1} = \framebox{$845KN$}\\
+& P_u = \phi_t \cdot P_n = 0.75 \cdot 845KN = \framebox{$633.75KN$}
 \end{align*}
 Se adoptara entonces el menor de los valores, en este caso $P_u = \framebox{$507.60KN$}$, como:
 \begin{align*}
